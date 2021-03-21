@@ -110,14 +110,14 @@ function printOut(){
         if(obj == sessionStorage.getItem("strangeStart")){
             continue;
         }
-           //json parse object back into an item class
-           var item = JSON.parse(obj)
-           //format the item into text
-           var text = `${item.name}, ${item.q1}, ${item.q2}, ${item.effect}, <a href=${item.history}>History</a><br>`;
-           //clean output
-           text = text.replace(new RegExp('null', 'g'), "NULL");
-           //write next item as text to document
-           myWindow.document.write(text);
+       //json parse object back into an item class
+       var item = JSON.parse(obj)
+       //format the item into text
+       var text = `${item.name}, ${item.q1}, ${item.q2}, ${item.effect}, <a href=${item.history}>History</a><br>`;
+       //clean output
+       text = text.replace(new RegExp('null', 'g'), "NULL");
+       //write next item as text to document
+       myWindow.document.write(text);
     }
     //close and focus the document
     myWindow.document.close();
